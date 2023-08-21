@@ -1,0 +1,19 @@
+<h2>Remove Car and Generate Summary</h2>
+<form (submit)="removeCarAndGenerateSummary()">
+  <label for="licensePlate">License Plate:</label>
+  <input
+    type="text"
+    id="licensePlate"
+    [(ngModel)]="licensePlateToRemove"
+    name="licensePlate"
+    required
+  />
+  <button type="submit">Remove Car and Generate Summary</button>
+</form>
+<div *ngIf="summary">
+  <h3>Summary</h3>
+  <p>Removed Car License Plate: {{ removedCarLicensePlate }}</p>
+  <p>Entry Time: {{ entryTime | date : "shortTime" }}</p>
+  <p>Exit Time: {{ exitTime | date : "shortTime" }}</p>
+  <p>Total Payment: {{ totalPayment }} RON</p>
+</div>

@@ -1,0 +1,12 @@
+<h2>Add Car to Parking</h2>
+<form (submit)="addCar()">
+  <label for="licensePlate">License Plate:</label>
+  <input
+    type="text"
+    id="licensePlate"
+    [(ngModel)]="newCarLicensePlate"
+    [ngModelOptions]="{ standalone: true }"
+    required
+  />
+  <button type="submit">Add Car</button>
+</form>
